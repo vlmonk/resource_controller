@@ -44,7 +44,7 @@ ActiveRecord::Schema.define(:version => 14) do
     t.integer "personnel_id"
   end
 
-  create_table "photos_tags", :force => true do |t|
+  create_table "photos_tags", :id => false, :force => true do |t|
     t.integer "photo_id"
     t.integer "tag_id"
   end

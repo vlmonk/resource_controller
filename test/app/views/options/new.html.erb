@@ -2,7 +2,7 @@
 
 <%= error_messages_for :option %>
 
-<% form_for(:option, :url => collection_url) do |f| %>
+<%= form_for(:option, :url => collection_url) do |f| %>
   <%= render :partial => "form", :locals => { :f => f } %>
   <p>
     <%= submit_tag "Create" %>

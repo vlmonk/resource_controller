@@ -11,7 +11,7 @@ class Cms::PhotosControllerTest < ActionController::TestCase
     @response   = ActionController::TestResponse.new
     @photo      = Photo.find 1
   end
-  
+
   context "with personnel as parent" do
     context "on get to :index" do
       setup do
@@ -26,13 +26,13 @@ class Cms::PhotosControllerTest < ActionController::TestCase
         assert assigns(:photos).all? { |photo| photo.personnel.id == 1 }
       end
     end
-    
+
     context "on post to :create" do
       setup do
         post :create, :personnel_id => 1, :photo => {}
       end
 
-      should_redirect_to 'cms_personnel_photo_path(@photo.personnel, @photo)'
+      should_redirect_to('cms_personnel_photo_path') { cms_personnel_photo_path(@photo.personnel, @photo) }
       should_assign_to :photo
       should_assign_to :personnel
       should "scope photo to personel" do

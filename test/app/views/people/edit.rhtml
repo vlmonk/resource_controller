@@ -2,7 +2,7 @@
 
 <%= error_messages_for :person %>
 
-<% form_for(:person, :url => object_url, :html => { :method => :put }) do |f| %>
+<%= form_for(:person, :url => object_url, :html => { :method => :put }) do |f| %>
   <p>
     <b>Name</b><br />
     <%= f.text_field :name %>

@@ -2,7 +2,7 @@
 
 <%= error_messages_for :photo %>
 
-<% form_for(:photo, :url => photos_path) do |f| %>
+<%= form_for(:photo, :url => photos_path) do |f| %>
   <p>
     <b>Title</b><br />
     <%= f.text_field :title %>

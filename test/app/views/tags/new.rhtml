@@ -2,7 +2,7 @@
 
 <%= error_messages_for :tag %>
 
-<% form_for(:tag, :url => tags_path) do |f| %>
+<%= form_for(:tag, :url => tags_path) do |f| %>
   <p>
     <b>Name</b><br />
     <%= f.text_field :name %>

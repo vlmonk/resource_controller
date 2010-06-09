@@ -9,12 +9,13 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["James Golick"]
-  s.date = %q{2009-12-29}
+  s.date = %q{2010-05-16}
   s.description = %q{}
   s.email = %q{james@giraffesoft.ca}
   s.extra_rdoc_files = [
     "LICENSE",
-     "README.rdoc"
+     "README.rdoc",
+     "TODO"
   ]
   s.files = [
     "README.rdoc",
@@ -53,7 +54,6 @@ Gem::Specification.new do |s|
      "lib/resource_controller/action_options.rb",
      "lib/resource_controller/actions.rb",
      "lib/resource_controller/base.rb",
-     "lib/resource_controller/class_methods.rb",
      "lib/resource_controller/controller.rb",
      "lib/resource_controller/failable_action_options.rb",
      "lib/resource_controller/helpers.rb",
@@ -252,7 +252,7 @@ Gem::Specification.new do |s|
   s.homepage = %q{http://jamesgolick.com/resource_controller}
   s.rdoc_options = ["--charset=UTF-8"]
   s.require_paths = ["lib"]
-  s.rubygems_version = %q{1.3.5}
+  s.rubygems_version = %q{1.3.6}
   s.summary = %q{Rails RESTful controller abstraction plugin.}
   s.test_files = [
     "test/app/controllers/accounts_controller.rb",
