@@ -27,8 +27,8 @@ class PhotosControllerTest < ActionController::TestCase
 
       should_respond_with :success
       should_render_template "index"
-      should_assign_to :photos
-      should_assign_to :user
+      should assign_to :photos
+      should assign_to :user
       should "scope photos to user" do
         assert assigns(:photos).all? { |photo| photo.user.id == 1 }
       end
@@ -40,8 +40,8 @@ class PhotosControllerTest < ActionController::TestCase
       end
 
       should_redirect_to 'user_photo_path(@photo.user, @photo)'
-      should_assign_to :photo
-      should_assign_to :user
+      should assign_to :photo
+      should assign_to :user
       should "scope photo to user" do
         assert accounts(:one), assigns(:photo).user
       end

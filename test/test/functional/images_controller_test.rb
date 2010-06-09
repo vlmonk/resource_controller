@@ -13,8 +13,8 @@ class ImagesControllerTest < ActionController::TestCase
       end
 
       should_redirect_to 'user_image_path(@image.user)'
-      should_assign_to :image
-      should_assign_to :user
+      should assign_to :image
+      should assign_to :user
       should "scope image to user" do
         assert users(:one), assigns(:image).user
       end

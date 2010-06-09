@@ -11,7 +11,7 @@ class TagsControllerTest < ActionController::TestCase
         get :index, :photo_id => 1
       end
 
-      should_assign_to :products
+      should assign_to :products
       should_render_template "index"
       should_respond_with :success
       
@@ -25,7 +25,7 @@ class TagsControllerTest < ActionController::TestCase
         xhr :get, :index, :photo_id => 1
       end
 
-      should_assign_to :products
+      should assign_to :products
       should_respond_with :success
 
       should "respond with rjs" do

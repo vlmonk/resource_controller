@@ -20,8 +20,8 @@ class Cms::PhotosControllerTest < ActionController::TestCase
 
       should_respond_with :success
       should_render_template "index"
-      should_assign_to :photos
-      should_assign_to :personnel
+      should assign_to :photos
+      should assign_to :personnel
       should "scope photos to personnel" do
         assert assigns(:photos).all? { |photo| photo.personnel.id == 1 }
       end
@@ -33,8 +33,8 @@ class Cms::PhotosControllerTest < ActionController::TestCase
       end
 
       should_redirect_to('cms_personnel_photo_path') { cms_personnel_photo_path(@photo.personnel, @photo) }
-      should_assign_to :photo
-      should_assign_to :personnel
+      should assign_to :photo
+      should assign_to :personnel
       should "scope photo to personel" do
         assert personnel(:one), assigns(:photo).personnel
       end
