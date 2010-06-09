@@ -216,13 +216,6 @@ end
 
 module Shoulda # :nodoc:
   module Controller
-    # Formats tested by #should_be_restful.  Defaults to [:html, :xml]
-    VALID_FORMATS = [:html] unless defined?(VALID_FORMATS)
-
-
-    # Actions tested by #should_be_restful
-    VALID_ACTIONS = [:index, :show, :new, :edit, :create, :update, :destroy] unless defined?(VALID_FORMATS) # :doc:
-
     # A ResourceOptions object is passed into should_be_restful in order to configure the tests for your controller.
     #
     # Example:
@@ -259,6 +252,14 @@ module Shoulda # :nodoc:
     #
     class ResourceOptions
       # Configuration options for the create, update, destroy actions under should_be_restful
+      
+      # Formats tested by #should_be_restful.  Defaults to [:html, :xml]
+      VALID_FORMATS = [:html] unless defined?(VALID_FORMATS)
+
+
+      # Actions tested by #should_be_restful
+      VALID_ACTIONS = [:index, :show, :new, :edit, :create, :update, :destroy] unless defined?(VALID_FORMATS) # :doc:
+
       class ActionOptions
         # String evaled to get the target of the redirection.
         # All of the instance variables set by the controller will be available to the
@@ -447,7 +448,7 @@ module Shoulda # :nodoc:
   end
 end
 
-Shoulda::Controller::VALID_FORMATS.each do |format|
+Shoulda::Controller::ResourceOptions::VALID_FORMATS.each do |format|
   include "Shoulda::Controller::#{format.to_s.upcase}".constantize
 end
 
