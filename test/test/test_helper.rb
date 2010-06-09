@@ -258,7 +258,7 @@ module Shoulda # :nodoc:
 
 
       # Actions tested by #should_be_restful
-      VALID_ACTIONS = [:index, :show, :new, :edit, :create, :update, :destroy] unless defined?(VALID_FORMATS) # :doc:
+      VALID_ACTIONS = [:index, :show, :new, :edit, :create, :update, :destroy] unless defined?(VALID_ACTIONS) # :doc:
 
       class ActionOptions
         # String evaled to get the target of the redirection.
