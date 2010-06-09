@@ -4,7 +4,7 @@ class ResourceController::Helpers::InternalTest < Test::Unit::TestCase
   def setup
     @controller = PostsController.new
 
-    @params = stub :[] => "1"
+    @params = stubs(:[]).returns("1")
     @controller.stubs(:params).returns(@params)
 
     @object = Post.new

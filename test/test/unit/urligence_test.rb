@@ -8,8 +8,8 @@ end
 class UrligenceTest < ActiveSupport::TestCase  
   def setup
     @controller = PhotosController.new
-    @tag   = stub(:class => stub(:name => "Tag"), :to_param => 'awesomestuff')
-    @photo = stub(:class => stub(:name => "Photo"), :to_param => 1)
+    @tag   = stubs(:class => stubs(:name => "Tag"), :to_param => 'awesomestuff')
+    @photo = stubs(:class => stubs(:name => "Photo"), :to_param => 1)
   end
   
   context "with one object" do
