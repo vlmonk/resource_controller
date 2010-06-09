@@ -217,11 +217,11 @@ end
 module Shoulda # :nodoc:
   module Controller
     # Formats tested by #should_be_restful.  Defaults to [:html, :xml]
-    VALID_FORMATS = [:html]
+    VALID_FORMATS = [:html] unless defined?(VALID_FORMATS)
 
 
     # Actions tested by #should_be_restful
-    VALID_ACTIONS = [:index, :show, :new, :edit, :create, :update, :destroy] # :doc:
+    VALID_ACTIONS = [:index, :show, :new, :edit, :create, :update, :destroy] unless defined?(VALID_FORMATS) # :doc:
 
     # A ResourceOptions object is passed into should_be_restful in order to configure the tests for your controller.
     #
