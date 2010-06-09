@@ -1,6 +1,6 @@
 require File.dirname(__FILE__)+'/../../test_helper'
 
-class Helpers::UrlsTest < Test::Unit::TestCase
+class ResourceController::Helpers::UrlsTest < Test::Unit::TestCase
   def setup
     @controller = PostsController.new
 

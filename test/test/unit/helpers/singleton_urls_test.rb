@@ -1,6 +1,6 @@
 require File.dirname(__FILE__)+'/../../test_helper'
 
-class Helpers::SingletonUrlsTest < Test::Unit::TestCase
+class ResourceController::Helpers::SingletonUrlsTest < Test::Unit::TestCase
   
   context "*_url_options helpers" do
     setup do

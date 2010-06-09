@@ -1,6 +1,6 @@
 require File.dirname(__FILE__)+'/../../test_helper'
 
-class Helpers::SingletonCurrentObjectsTest < Test::Unit::TestCase
+class ResourceController::Helpers::SingletonCurrentObjectsTest < Test::Unit::TestCase
   context "singleton" do
     setup do
       @image_controller = ImagesController.new

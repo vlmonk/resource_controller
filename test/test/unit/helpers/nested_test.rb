@@ -13,7 +13,7 @@ class CommentsControllerMock
   belongs_to :post
 end
 
-class Helpers::NestedTest < Test::Unit::TestCase
+class ResourceController::Helpers::NestedTest < Test::Unit::TestCase
   def setup
     @controller = PostsControllerMock.new
 

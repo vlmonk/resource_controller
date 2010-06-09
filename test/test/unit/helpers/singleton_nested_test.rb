@@ -14,7 +14,7 @@ class ImagesControllerMock
   belongs_to :user 
 end
 
-class Helpers::SingletonNestedTest < Test::Unit::TestCase
+class ResourceController::Helpers::SingletonNestedTest < Test::Unit::TestCase
   def setup
     @controller = UsersControllerMock.new
     @params = stub :[] => "1"

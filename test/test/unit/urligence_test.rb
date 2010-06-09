@@ -2,7 +2,7 @@ require File.dirname(__FILE__)+'/../test_helper'
 require 'urligence'
 
 class PhotosController
-  include Urligence
+  include ResourceController::Urligence
 end
 
 class UrligenceTest < ActiveSupport::TestCase  
