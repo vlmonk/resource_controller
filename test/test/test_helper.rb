@@ -35,14 +35,14 @@ module Shoulda # :nodoc:
             end
 
             if res.denied.actions.include?(:show)
-              should_not_assign_to res.object
-              should_redirect_to res.denied.redirect
-              should_set_the_flash_to res.denied.flash
+              should_not assign_to res.object
+              should redirect_to res.denied.redirect
+              should set_the_flash_to res.denied.flash
             else
-              should_assign_to res.object
-              should_respond_with :success
-              should_render_template :show
-              should_not_set_the_flash
+              should assign_to res.object
+              should respond_with :success
+              should render_template :show
+              should_not set_the_flash
             end
           end
         end
@@ -56,15 +56,15 @@ module Shoulda # :nodoc:
             end
 
             if res.denied.actions.include?(:edit)
-              should_not_assign_to res.object
-              should_redirect_to res.denied.redirect
-              should_set_the_flash_to res.denied.flash
+              should_not assign_to res.object
+              should redirect_to res.denied.redirect
+              should set_the_flash_to res.denied.flash
             else
-              should_assign_to res.object
-              should_respond_with :success
-              should_render_template :edit
-              should_not_set_the_flash
-              should_render_a_form
+              should assign_to res.object
+              should respond_with :success
+              should render_template :edit
+              should_not set_the_flash
+              should render_a_form
               should "set @#{res.object} to requested instance" do
                 assert_equal @record, assigns(res.object)
               end
