@@ -1,4 +1,4 @@
-require File.dirname(__FILE__) + '/../test_helper'
+require 'test_helper'
 
 class SomethingsControllerTest < ActionController::TestCase
   def setup
@@ -11,11 +11,5 @@ class SomethingsControllerTest < ActionController::TestCase
         assert !@controller.respond_to?(action)
       end
     end
-  end
-  
-  should_be_restful do |resource|
-    resource.formats = [:html]
-    
-    resource.actions = [:index, :show]
   end
 end

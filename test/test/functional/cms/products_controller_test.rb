@@ -1,23 +1,37 @@
-require File.dirname(__FILE__) + '/../../test_helper'
-require 'cms/products_controller'
-
-# Re-raise errors caught by the controller.
-class Cms::ProductsController; def rescue_action(e) raise e end; end
+require 'test_helper'
 
 class Cms::ProductsControllerTest < ActionController::TestCase
   def setup
-    @controller = Cms::ProductsController.new
-    @request    = ActionController::TestRequest.new
-    @response   = ActionController::TestResponse.new
-    @product    = Product.find 1
+    @product = products :one
   end
 
-  should_be_restful do |resource|
-    resource.formats = [:html]
-    resource.klass   = ::Product
-    resource.update.redirect  = 'cms_product_path(@product)'
-    resource.destroy.redirect = 'cms_products_path'
-    resource.create.redirect  = 'cms_product_path(@product)'
-    resource.create.flash     = /something/i
+  context "on POST to :create" do
+    context "that succeeds" do
+      setup do
+        post :create, :product => {:name => "My Product"}
+      end
+
+      should assign_to(:product).with_kind_of(Product)
+      should redirect_to("products page") { cms_product_url(assigns(:product)) }
+      should set_the_flash.to "something"
+
+      should "create the record" do
+        assert Product.find_by_name("My Product")
+      end
+    end
+
+    context "that fails" do
+      setup do
+        Product.any_instance.stubs(:save).returns(false)
+        post :create, :product => {}
+      end
+
+      should assign_to(:product).with_kind_of(Product)
+      should respond_with :success
+      should render_with_layout :application
+      should render_template :new
+      should_not set_the_flash
+    end
   end
+
 end
