@@ -8,3 +8,4 @@ rdoc
 test/db/test.sqlite3
 .specification
 .idea
+doc
