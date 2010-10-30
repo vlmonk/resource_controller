@@ -65,9 +65,9 @@ module ResourceController
             parent_model.find(parent_param)
           else
             if parent_model.respond_to? :find_by_param!
-              parent_model.find_by_param!(parent_param)
+              parent_model.find_by_param!(param)
             elsif parent_model.respond_to? :find_by_permalink
-              parent_model.find_by_permalink(parent_param)
+              parent_model.find_by_permalink(param)
             end
           end
         end
