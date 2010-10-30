@@ -6,7 +6,7 @@ class CommentsControllerTest < ActionController::TestCase
     @comment = Comment.find 1
   end
 
-  context "on GET to index" do
+  context "on GET to :index" do
     setup do
       get :index, :post_id => 1
     end

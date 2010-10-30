@@ -15,7 +15,7 @@ class PeopleControllerTest < ActionController::TestCase
   #   resource.destroy.redirect = 'people_url'
   # end
 
-  context "on GET to index" do
+  context "on GET to :index" do
     setup do
       get :index
     end

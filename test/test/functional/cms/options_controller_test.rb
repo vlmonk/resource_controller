@@ -6,7 +6,7 @@ class Cms::OptionsControllerTest < ActionController::TestCase
     @option = options :one
   end
 
-  context "on GET to index" do
+  context "on GET to :index" do
     setup do
       get :index, :product_id => 1
     end

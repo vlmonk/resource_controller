@@ -5,7 +5,7 @@ class UsersControllerTest < ActionController::TestCase
     @dude = accounts :one
   end
 
-  context "on GET to index" do
+  context "on GET to :index" do
     setup do
       get :index
     end

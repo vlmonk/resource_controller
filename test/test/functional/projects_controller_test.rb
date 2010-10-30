@@ -5,7 +5,7 @@ class ProjectsControllerTest < ActionController::TestCase
     @project = projects :one
   end
 
-  context "on GET to index" do
+  context "on GET to :index" do
     setup do
       get :index
     end

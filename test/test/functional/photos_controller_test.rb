@@ -22,7 +22,7 @@ class PhotosControllerTest < ActionController::TestCase
 
   # RESTful test
   #
-  context "on GET to index" do
+  context "on GET to :index" do
     setup do
       get :index, :user_id => 1
     end
