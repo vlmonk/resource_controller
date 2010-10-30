@@ -4,9 +4,10 @@ gem 'rails', '=3.0.1'
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem "resource_controller", :require => "resource_controller", :path => "../"
 
+gem 'redgreen'
+
 group :test do
   gem "shoulda"
   gem "mocha"
   gem "ruby-debug"
-  gem 'redgreen'
 end
