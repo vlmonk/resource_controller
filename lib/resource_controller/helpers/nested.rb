@@ -54,22 +54,7 @@ module ResourceController
         # Returns the current parent object if a parent object is present.
         #
         def parent_object
-          # hack by sean to allow permalink parents
-          parent? && !parent_singleton? ? parent_model_find(parent_param) : nil
-        end
-
-        # Finds parent model by id or param
-        #
-        def parent_model_find(parent_param)
-          if (Integer(parent_param) rescue false)
-            parent_model.find(parent_param)
-          else
-            if parent_model.respond_to? :find_by_param!
-              parent_model.find_by_param!(param)
-            elsif parent_model.respond_to? :find_by_permalink
-              parent_model.find_by_permalink(param)
-            end
-          end
+          parent? && !parent_singleton? ? parent_model.find(parent_param) : nil
         end
 
         # If there is a parent, returns the relevant association proxy.  Otherwise returns model.
