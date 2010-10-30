@@ -5,7 +5,7 @@
 
 Gem::Specification.new do |s|
   s.name = %q{makandra_resource_controller}
-  s.version = "0.7.0"
+  s.version = "0.7.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["James Golick", "Brian Quinn", "Derek Kastner", "Sean Schofield", "Henning Koch"]
@@ -49,6 +49,7 @@ Gem::Specification.new do |s|
      "generators/scaffold_resource/templates/view_new.haml",
      "generators/scaffold_resource/templates/view_show.erb",
      "generators/scaffold_resource/templates/view_show.haml",
+     "lib/makandra_resource_controller.rb",
      "lib/resource_controller.rb",
      "lib/resource_controller/accessors.rb",
      "lib/resource_controller/action_options.rb",
