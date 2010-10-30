@@ -39,16 +39,7 @@ module ResourceController
         #   end
         #
         def object
-          return @object if param.blank?
-          if (Integer(param) rescue false)
-            @object ||= end_of_association_chain.find(param)
-          else
-            if end_of_association_chain.respond_to? :find_by_param!
-              @object ||= end_of_association_chain.find_by_param!(param)
-            elsif end_of_association_chain.respond_to? :find_by_permalink
-              @object ||= end_of_association_chain.find_by_permalink(param)
-            end
-          end
+          @object ||= end_of_association_chain.find(param) unless param.nil?
           @object
         end
 
