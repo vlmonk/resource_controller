@@ -2,15 +2,25 @@
 
 resource_controller makes RESTful controllers easier, more maintainable, and super readable.  With the RESTful controller pattern hidden away, you can focus on what makes your controller special.
 
-== Get It
+== About this fork
 
-Install it as a plugin:
+- This fork adds Rails 3 compatibility to the currently unmaintained {resource_controller}[http://github.com/jamesgolick/resource_controller]. You should use the original resource_controller for Rails 2 applications.
+- This fork adds *no* new features.
+- This fork is available on RubyGems as +makandra_resource_controller+ for convenience.
 
-  script/plugin install git://github.com/giraffesoft/resource_controller.git
-  
-Or grab the source
-  
-  git clone git://github.com/giraffesoft/resource_controller.git
+== Installation
+
+First install the gem:
+
+  sudo gem install makandra_resource_controller
+
+Then add this to your +Gemfile+:
+
+  gem 'makandra_resource_controller'
+
+Finally lock the gem version:
+
+  bundle install
 
 = Usage
 
@@ -323,7 +333,10 @@ You get the idea.  Everything is automagical!  All parameters are inferred.
 
 == Credits
 
-resource_controller was created, and is maintained by {James Golick}[http://jamesgolick.com].
+- resource_controller was created by {James Golick}[http://jamesgolick.com]
+- It was made compatible with Rails 3 by Brian Quinn, Derek Kastner and Sean Schofield in the {BDQ fork}[http://github.com/BDQ/resource_controller]
+- Changes in this makandra fork by {Henning Koch}[http://makandra.com/]
+
 
 == License
 
