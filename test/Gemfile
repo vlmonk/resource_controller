@@ -5,7 +5,7 @@ gem 'sqlite3-ruby', :require => 'sqlite3'
 gem "resource_controller", :require => "resource_controller", :path => "../"
 
 group :test do
-    gem "shoulda", :git => "git://github.com/thoughtbot/shoulda.git"
+    gem "shoulda"
     gem "mocha"
     gem "ruby-debug"
 end
