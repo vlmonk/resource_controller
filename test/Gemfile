@@ -2,7 +2,7 @@ source 'http://rubygems.org'
 
 gem 'rails', '=3.0.1'
 gem 'sqlite3-ruby', :require => 'sqlite3'
-gem "resource_controller", :require => "resource_controller", :path => "../"
+gem "makandra_resource_controller", :path => "../"
 
 gem 'redgreen'
 
