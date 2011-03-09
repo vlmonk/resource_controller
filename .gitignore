@@ -6,7 +6,6 @@ nbproject/*
 .gitignore~
 rdoc
 test/db/test.sqlite3
-test/Gemfile.lock
 .specification
 .idea
 doc

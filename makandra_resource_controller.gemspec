@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["James Golick", "Brian Quinn", "Derek Kastner", "Sean Schofield", "Henning Koch"]
-  s.date = %q{2010-10-30}
+  s.date = %q{2011-03-09}
   s.description = %q{}
   s.email = %q{github@makandra.com}
   s.extra_rdoc_files = [
