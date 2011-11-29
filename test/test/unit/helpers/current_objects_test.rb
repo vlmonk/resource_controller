@@ -27,6 +27,14 @@ class ResourceController::Helpers::CurrentObjectsTest < Test::Unit::TestCase
     should "find all" do
       assert_equal @collection, @controller.send(:collection)
     end
+
+    should "cache the loaded collection" do
+      Post.reset_mocha
+      Post.expects(:find).with(:all).once.returns(@collection)
+      2.times do
+        @controller.send(:collection)
+      end
+    end
   end
 
   context "param helper" do
